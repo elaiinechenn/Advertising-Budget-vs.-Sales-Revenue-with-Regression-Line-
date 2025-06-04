@@ -1,5 +1,5 @@
 # Advertising Budget vs. Sales Revenue with Regression Line
-![Uploading image.png…]()
+<img width="736" alt="image" src="https://github.com/user-attachments/assets/baac4b0d-d474-4015-97c1-ff6061b5e9b9" />
 
 
 <img width="1064" alt="image" src="https://github.com/user-attachments/assets/fcf6aea7-ddd5-4414-a9e8-c86a958b68fb" />
