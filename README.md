@@ -4,6 +4,17 @@
 
 <img width="1064" alt="image" src="https://github.com/user-attachments/assets/fcf6aea7-ddd5-4414-a9e8-c86a958b68fb" />
 
+# 
+R² = 0.40（決定係數）
+🔍 解釋：
+這個模型可以解釋銷售額變異的 40%。
+
+也就是說，40% 的銷售變動是由廣告預算所帶來的，其餘 60% 可能來自其他未納入模型的因素（如季節、通路、促銷等）。
+
+✅ R² 越高越好，但不是唯一標準：
+R² > 0.7：通常表示模型具有不錯的解釋力。
+
+R² 太高（接近 1）也可能意味「過度擬合」。
 
 #
 ## R², P-value, Regression Coefficients Meaning
