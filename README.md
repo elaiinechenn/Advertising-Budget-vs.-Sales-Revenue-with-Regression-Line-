@@ -6,6 +6,7 @@
 
 
 #
+## R², P-value, Regression Coefficients Meaning
 ### 1. R Square（R²，決定係數）
 R² 表示模型對資料的解釋能力。它的值在 0 到 1 之間。
 
