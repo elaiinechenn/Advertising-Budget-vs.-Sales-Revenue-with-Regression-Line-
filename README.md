@@ -5,91 +5,97 @@
 <img width="1064" alt="image" src="https://github.com/user-attachments/assets/fcf6aea7-ddd5-4414-a9e8-c86a958b68fb" />
 
 # 
-## R² = 0.40（決定係數）
-🔍 解釋：
-這個模型可以解釋銷售額變異的 40%。
+## R² = 0.40（Coefficient of Determination）
+🔍 Explanation：
+This model can explain 40% of the variation in sales.
 
-也就是說，40% 的銷售變動是由廣告預算所帶來的，其餘 60% 可能來自其他未納入模型的因素（如季節、通路、促銷等）。
+In other words, 40% of the changes in sales are driven by the advertising budget. The remaining 60% may be attributed to other factors not included in the model (such as seasonality, distribution channels, promotions, etc.).
 
-✅ R² 越高越好，但不是唯一標準：
-R² > 0.7：通常表示模型具有不錯的解釋力。
+✅ A higher R² is generally better, but it’s not the only metric to consider:
+R² > 0.7: Often indicates a model with good explanatory power.
 
-R² 太高（接近 1）也可能意味「過度擬合」。
+A very high R² (close to 1) may also signal overfitting.
 
-## P 值（P>|t|） = 0.000（Ad_Budget 那行）
-🔍 解釋：
-P 值是用來檢驗「這個變數的影響是不是只是巧合」。
+## P-value (P>|t|) = 0.000 (for Ad_Budget)
+🔍  Explanation：
+The p-value tests whether the impact of a variable could simply be due to random chance.
 
-一般只要 P 值 < 0.05，就代表這個變數是統計上顯著的。
+As a general rule, if the p-value is less than 0.05, the variable is considered statistically significant.
 
-✅ 在這個例子中：
-Ad_Budget 的 P 值為 0.000，遠小於 0.05 → 代表「廣告預算確實會影響銷售額」，而不是巧合。
+✅ In this example:
+The p-value for Ad_Budget is 0.000, which is far below 0.05 → This means the advertising budget has a real, statistically significant impact on sales, and it’s not just a coincidence.
 
-## 係數（coef）= 2.1419（Ad_Budget 那行）
-🔍 解釋：
-意思是：每增加 1 元 廣告預算，銷售額平均會增加 約 2.14 元。
+## Coefficient (coef) = 2.1419 (for Ad_Budget)
+🔍 Explanation：
+This means: for every additional 1 unit of advertising budget, sales increase by approximately 2.14 units on average.
 
-這是你最直接可以轉化成商業策略的指標。
+This is the most direct metric that can be translated into a business strategy.
 
-✅ 總結一句話版本：
-這個模型顯示，廣告預算每增加 1 元，銷售額會增加 2.14 元。這個影響力是統計上顯著的（P 值 < 0.05），而模型整體可以解釋 40% 的銷售變化（R² = 0.40）。
+✅ Summary：
+This model shows that for every additional $1 spent on advertising, sales increase by $2.14 on average. This impact is statistically significant (p-value < 0.05), and the model as a whole explains 40% of the variation in sales (R² = 0.40).
 
 #
 ## R², P-value, Regression Coefficients Meaning
-### 1. R Square（R²，決定係數）
-R² 表示模型對資料的解釋能力。它的值在 0 到 1 之間。
+### 1. R Square（R²，Coefficient of Determination）
+R² indicates how well the model explains the variation in the data. Its value ranges from 0 to 1.
 
-意思：
-R² = 1：模型能完全解釋資料中的變異（理想狀況）。
+Meaning：
+R² = 1：The model explains all the variation (ideal).
 
-R² = 0：模型完全無法解釋資料變異（等於亂猜）。
+R² = 0：The model explains none of the variation (like random guessing).
 
-R² 越高 → 模型越能解釋目標變數的變化。
+The higher the R², the better the model explains the dependent variable.
 
-舉例：
-假設你在做「廣告支出對銷售的影響」分析：
+Example：
+If you're analyzing how ad spending affects sales:
 
-如果 R² = 0.85，表示 85% 的銷售變化可以用你的模型（例如：廣告花費）來解釋。
+R² = 0.85 means 85% of the changes in sales can be explained by the model (e.g., advertising spend).
+
 
 
 ### 2. P-value（P 值）
-是什麼？
-P 值是用來檢定變數是否顯著的統計指標。
+What is it?
+The p-value is a statistical metric used to test whether a variable is significantly related to the outcome.
 
-意思：
-P 值越小 → 代表變數越有「統計意義」，真的對結果有影響。
+Meaning:
+The smaller the p-value, the more statistically meaningful the variable is.
 
-常見的顯著水準是 0.05：
 
-P 值 < 0.05：統計上顯著，有信心這個變數對結果有貢獻。
+A common threshold is 0.05:
 
-P 值 > 0.05：這個變數的影響力可能只是巧合或雜訊。
+p < 0.05: The variable is statistically significant and likely impacts the result.
 
-舉例：
-如果「Facebook 廣告支出」的 P 值是 0.01，代表它對銷售的影響是有統計意義的。
+p > 0.05: The impact may be due to chance or noise.
+
+
+
+Example：
+If the p-value for "Facebook Ad Spend" is 0.01, it suggests a statistically significant impact on sales.
+
 
 ### 3. Regression Coefficients（迴歸係數）
-是什麼？
-這些是模型中每個變數的「影響力」或「斜率」。
+What is it？
+These represent the influence (or slope) of each variable in the model.
 
-意思：
-迴歸係數表示：某個變數每變動 1 單位，結果變數會改變多少。
+Meaning：
+The regression coefficient indicates how much the outcome variable will change for a one-unit change in the independent variable.
 
-係數可以是正的（正向影響）或負的（負向影響）。
+The coefficient can be positive (positive impact) or negative (negative impact).
 
-舉例：
-假設你有這樣的迴歸方程式：
+Example：
+Suppose your regression formula is:
 
-銷售額 = 1000 + 2.5 × 廣告預算
+Sales = 1000 + 2.5 × Ad_Budget
 
-→ 這表示每增加 1 元的廣告預算，預期銷售額會增加 2.5 元。
+→ This means that for every additional $1 spent on advertising, expected sales increase by $2.50.
 
-#
-| 名稱                     | 中文   | 代表什麼             | 看什麼           |
+
+# Summary Table
+| Name                   | Name in Chinese    | What It Represents             | How to Interpret           |
 | ---------------------- | ---- | ---------------- | ------------- |
-| R Square (R²)          | 決定係數 | 模型能解釋多少變異        | 越高越好（但不要過度擬合） |
-| P-value                | P 值  | 變數是否真的有用，是否統計上顯著 | < 0.05 通常代表顯著 |
-| Regression Coefficient | 迴歸係數 | 每個變數對結果的影響力      | 看正負號與數值大小     |
+| R Square (R²)          | 決定係數 | How much variance the model explains        | Higher is better (watch for overfitting) |
+| P-value                | P 值  | Whether the variable is statistically meaningful | < 0.05 typically means significant |
+| Regression Coefficient | 迴歸係數 | The impact of each variable on the outcome      | Check sign and magnitude     |
 
 
 
